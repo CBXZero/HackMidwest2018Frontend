@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PollService } from '../poll.service';
-import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
-import { Router } from '../../../node_modules/@angular/router';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-poll-page',

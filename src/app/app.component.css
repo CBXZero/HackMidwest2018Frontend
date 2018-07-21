@@ -5,3 +5,8 @@
 .icon {
     padding: 0 14px;
 }
+
+.navbarLink {
+    text-decoration: none;
+    color: white;
+}
