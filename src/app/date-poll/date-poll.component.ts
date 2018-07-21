@@ -7,9 +7,8 @@ import { PollService } from '../poll.service';
   styleUrls: ['./date-poll.component.css']
 })
 export class DatePollComponent implements OnInit {
+  dates: { startTime: Date; endTime: Date; }[];
   
-  dates: { date: string; time: string; }[];
-
   constructor(public pollService: PollService) {
     this.dates = this.pollService.GetTestDatePoll().options;
   }

@@ -11,8 +11,8 @@ export class PollService {
     return {
       type: "Date",
       options: [
-        {date: "7/21/2018", time: "5pm"},
-        {date: "7/22/2018", time: "5pm"}
+        {startTime: new Date(2018, 7, 21, 17), endTime: new Date(2018, 7, 21, 19)},
+        {startTime: new Date(2018, 7, 25, 17), endTime: new Date(2018, 7, 22, 19)}
       ]
     }
   }
