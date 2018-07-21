@@ -1,0 +1,9 @@
+<div [formGroup]="form">
+    <div formArrayName="contributions">
+        <div *ngFor="let contribution of contributions.controls; let i=index">
+            <mat-form-field>
+                <input matInput #contribution (keyup.enter)="onEnter()" placeholder="Item" type="text" [formControlName]="i">
+            </mat-form-field>
+        </div>
+    </div>
+</div>

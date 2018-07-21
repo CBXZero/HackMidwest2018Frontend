@@ -22,6 +22,10 @@ import { ItemPollComponent } from './item-poll/item-poll.component';
 import { ContributionComponent } from './contribution/contribution.component';
 import { CreateEventPageComponent } from './create-event-page/create-event-page.component';
 import { EditContributionsPageComponent } from './edit-contributions-page/edit-contributions-page.component';
+import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes : Routes = [
   {
@@ -55,6 +59,7 @@ const appRoutes : Routes = [
     ContributionComponent,
     CreateEventPageComponent,
     EditContributionsPageComponent,
+    DynamicListComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +70,9 @@ const appRoutes : Routes = [
     AngularFireAuthModule,
     MatCardModule,
     FlexLayoutModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
