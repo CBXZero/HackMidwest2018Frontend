@@ -16,16 +16,17 @@ export class EventsComponent implements OnInit {
   // description
 
   constructor(public afAuth: AngularFireAuth, public eventService: EventsService) {
-    afAuth.user.subscribe(r => {
+
+  }
+
+  ngOnInit() {
+    this.afAuth.user.subscribe(r => {
       if(r){
-        this.events = eventService.getTestData();
+        this.events = this.eventService.getTestData();
       } else {
         // Redirect to home
       }
     });
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -15,6 +15,9 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DatePollComponent } from './date-poll/date-poll.component';
 import { PollPageComponent } from './poll-page/poll-page.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { DateItemComponent } from './date-item/date-item.component';
 
 const appRoutes : Routes = [
   {
@@ -29,6 +32,10 @@ const appRoutes : Routes = [
   {
     path: 'events',
     component: EventsComponent
+  },
+  {
+    path: 'poll',
+    component: PollPageComponent
   }
 ]
 
@@ -39,6 +46,7 @@ const appRoutes : Routes = [
     EventsComponent,
     DatePollComponent,
     PollPageComponent,
+    DateItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +60,8 @@ const appRoutes : Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
-    )
+    ),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
     {provide: EventsService, useClass: EventsService}
