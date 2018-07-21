@@ -25,7 +25,7 @@ import { EditContributionsPageComponent } from './edit-contributions-page/edit-c
 import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InviteGuestPageComponent } from './invite-guest-page/invite-guest-page.component';
 import { ViewEventComponent } from './view-event/view-event.component';
 import { EditEventPageComponent } from './edit-event-page/edit-event-page.component';
@@ -51,6 +51,18 @@ const appRoutes : Routes = [
   {
     path: 'create-event',
     component: CreateEventPageComponent
+  },
+  {
+    path: 'edit-contributions',
+    component: EditContributionsPageComponent
+  },
+  {
+    path: 'invite-guests',
+    component: InviteGuestPageComponent
+  },
+  {
+    path: 'edit-event',
+    component: EditEventPageComponent
   }
 ]
 
