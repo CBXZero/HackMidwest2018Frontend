@@ -1,10 +1,20 @@
+<h2 class="h-bravo">
+    Request Contributions
+</h2>
 <div [formGroup]="form">
-    <div formArrayName="contributions">
-        <div *ngFor="let contribution of contributions.controls; let i=index">
-            <mat-form-field>
-                <input matInput #contribution (keyup.enter)="onEnter()" placeholder="Item" type="text" [formControlName]="i">
-            </mat-form-field>
-            <button *ngIf="contribution.value != '' && contributions.length > 1" class="deleteButton" mat-raised-button (click)="delete(i)" color="warn">Delete</button>
-        </div>
-    </div>
+    <ul class="contribution-request-list" formArrayName="contributions">
+
+        <li class="contribution-request-item" *ngFor="let contribution of contributions.controls; let i=index">
+            <label for="contribution-item-id-1">Item Number
+                <span class="item-number">{{i+1}}</span>
+            </label>
+            <input class="contribution" #contribution (keyup.enter)="onEnter()" type="text" [formControlName]="i" />
+            <button (click)="delete(i)" *ngIf="contribution.value != '' && contributions.length > 1"
+                 type="button">Delete</button>
+        </li>
+
+        <li class="contribution-request-item">
+            <button id="add-contribution-request-item" (click)="addContribution()" type="button">Add Another</button>
+        </li>
+    </ul>
 </div>
