@@ -20,6 +20,8 @@ import { environment } from '../environments/environment';
 import { DateItemComponent } from './date-item/date-item.component';
 import { ItemPollComponent } from './item-poll/item-poll.component';
 import { ContributionComponent } from './contribution/contribution.component';
+import { CreateEventPageComponent } from './create-event-page/create-event-page.component';
+import { EditContributionsPageComponent } from './edit-contributions-page/edit-contributions-page.component';
 
 const appRoutes : Routes = [
   {
@@ -51,6 +53,8 @@ const appRoutes : Routes = [
     DateItemComponent,
     ItemPollComponent,
     ContributionComponent,
+    CreateEventPageComponent,
+    EditContributionsPageComponent,
   ],
   imports: [
     BrowserModule,
