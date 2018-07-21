@@ -4,6 +4,7 @@
             <mat-form-field>
                 <input matInput #contribution (keyup.enter)="onEnter()" placeholder="Item" type="text" [formControlName]="i">
             </mat-form-field>
+            <button *ngIf="contribution.value != '' && contributions.length > 1" class="deleteButton" mat-raised-button (click)="delete(i)" color="warn">Delete</button>
         </div>
     </div>
 </div>
