@@ -28,6 +28,7 @@ import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InviteGuestPageComponent } from './invite-guest-page/invite-guest-page.component';
 import { ViewEventComponent } from './view-event/view-event.component';
+import { EditEventPageComponent } from './edit-event-page/edit-event-page.component';
 
 const appRoutes : Routes = [
   {
@@ -68,6 +69,7 @@ const appRoutes : Routes = [
     DynamicListComponent,
     InviteGuestPageComponent,
     ViewEventComponent,
+    EditEventPageComponent,
   ],
   imports: [
     BrowserModule,
