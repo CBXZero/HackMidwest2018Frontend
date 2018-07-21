@@ -26,6 +26,7 @@ import { DynamicListComponent } from './dynamic-list/dynamic-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { InviteGuestPageComponent } from './invite-guest-page/invite-guest-page.component';
 
 const appRoutes : Routes = [
   {
@@ -64,6 +65,7 @@ const appRoutes : Routes = [
     CreateEventPageComponent,
     EditContributionsPageComponent,
     DynamicListComponent,
+    InviteGuestPageComponent,
   ],
   imports: [
     BrowserModule,
