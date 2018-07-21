@@ -1,0 +1,34 @@
+// Brand
+
+$color-brand:           #000;
+
+$color-gold:            #E0D462;
+
+$color-sand:	        #F6F1CC;
+
+$color-blue:            #073147;
+$color-light-blue:      lighten($color-blue,20);
+$color-blue-highlight:  lighten($color-blue,30);
+$color-blue-dark:       darken($color-blue,10);
+
+
+$color-caribbean:       #0C8790;
+$color-red:             #F44C54;
+$color-copper:          #C69C6D;
+
+$color-green:           #00B677;
+$color-green-light:     lighten($color-green,20);
+$color-green-dark:      darken($color-green,10);
+
+
+
+// Utility
+$color-charcoal:		#222;
+$color-gray:			#777;
+$color-gray-light:	    #cecece;
+$color-smoke:			#f4f4f4;
+
+// Type
+
+$color-display-text:    $color-charcoal;
+$color-body-text:       $color-charcoal;
