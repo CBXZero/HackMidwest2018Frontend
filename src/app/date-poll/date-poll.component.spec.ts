@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EventsComponent } from './events.component';
+import { DatePollComponent } from './date-poll.component';
 
-describe('EventsComponent', () => {
-  let component: EventsComponent;
-  let fixture: ComponentFixture<EventsComponent>;
+describe('DatePollComponent', () => {
+  let component: DatePollComponent;
+  let fixture: ComponentFixture<DatePollComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventsComponent ]
+      declarations: [ DatePollComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EventsComponent);
+    fixture = TestBed.createComponent(DatePollComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

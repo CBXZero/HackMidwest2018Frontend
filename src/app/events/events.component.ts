@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
+import { EventsService } from '../events.service';
+import { EventModel } from '../../models/EventModel';
 
 @Component({
   selector: 'app-events',
@@ -7,7 +10,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent implements OnInit {
 
-  constructor() { }
+  events: EventModel[];
+
+  // name
+  // description
+
+  constructor(public afAuth: AngularFireAuth, public eventService: EventsService) {
+    afAuth.user.subscribe(r => {
+      if(r){
+        this.events = eventService.getTestData();
+      } else {
+        // Redirect to home
+      }
+    });
+  }
 
   ngOnInit() {
   }

@@ -10,6 +10,11 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EventsComponent } from './events/events.component';
 import { firebaseConfig } from './config';
+import { EventsService } from './events.service';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { DatePollComponent } from './date-poll/date-poll.component';
+import { PollPageComponent } from './poll-page/poll-page.component';
 
 const appRoutes : Routes = [
   {
@@ -20,6 +25,10 @@ const appRoutes : Routes = [
   {
     path: 'home',
     component: HomePageComponent
+  },
+  {
+    path: 'events',
+    component: EventsComponent
   }
 ]
 
@@ -28,6 +37,8 @@ const appRoutes : Routes = [
     AppComponent,
     HomePageComponent,
     EventsComponent,
+    DatePollComponent,
+    PollPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,12 +47,16 @@ const appRoutes : Routes = [
     MatIconModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
+    MatCardModule,
+    FlexLayoutModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }
     )
   ],
-  providers: [],
+  providers: [
+    {provide: EventsService, useClass: EventsService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
