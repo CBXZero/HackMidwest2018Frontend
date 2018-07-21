@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { EventsService } from '../events.service';
 import { EventModel } from '../../models/EventModel';
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { auth } from '../../../node_modules/firebase';
-import { AngularFireAuth } from '../../../node_modules/angularfire2/auth';
+import { auth } from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'app-home-page',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { auth } from '../../node_modules/firebase';
+import { auth } from 'firebase';
 
 @Component({
   selector: 'app-root',

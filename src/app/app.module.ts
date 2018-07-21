@@ -13,12 +13,12 @@ import { firebaseConfig } from './config';
 import { EventsService } from './events.service';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { DatePollComponent } from './date-poll/date-poll.component';
+import { DatePollPageComponent } from './date-poll-page/date-poll-page.component';
 import { PollPageComponent } from './poll-page/poll-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DateItemComponent } from './date-item/date-item.component';
-import { ItemPollComponent } from './item-poll/item-poll.component';
+import { ItemPollPageComponent } from './item-poll-page/item-poll-page.component';
 import { ContributionComponent } from './contribution/contribution.component';
 
 const appRoutes : Routes = [
@@ -46,10 +46,10 @@ const appRoutes : Routes = [
     AppComponent,
     HomePageComponent,
     EventsComponent,
-    DatePollComponent,
+    DatePollPageComponent,
     PollPageComponent,
     DateItemComponent,
-    ItemPollComponent,
+    ItemPollPageComponent,
     ContributionComponent,
   ],
   imports: [
