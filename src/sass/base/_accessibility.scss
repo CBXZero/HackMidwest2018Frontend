@@ -1,0 +1,43 @@
+.skip-links {
+	height: 44px;
+	display: block;
+	position: relative;
+	overflow: visible;
+	z-index: 999;
+	margin: 0;
+	padding: 0;
+	color: red;
+}
+
+.skip-links li {
+}
+
+@mixin hidden {
+	position: absolute !important;
+	left: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	margin:0 0 0 0%;
+	padding:0 0 0 1%;
+	border:0 !important;
+	height: 40px !important;
+	line-height: 40px;
+	overflow: hidden;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+.hidden { /* For accessible hidden text */
+	@include hidden;
+	}
+
+a.hidden:focus {
+	background: #fff;
+	display: block;
+	position: relative !important;
+}
+
+div:focus,
+div:target {
+	outline: none;
+}
