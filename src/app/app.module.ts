@@ -18,6 +18,8 @@ import { PollPageComponent } from './poll-page/poll-page.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { DateItemComponent } from './date-item/date-item.component';
+import { ItemPollComponent } from './item-poll/item-poll.component';
+import { ContributionComponent } from './contribution/contribution.component';
 
 const appRoutes : Routes = [
   {
@@ -47,6 +49,8 @@ const appRoutes : Routes = [
     DatePollComponent,
     PollPageComponent,
     DateItemComponent,
+    ItemPollComponent,
+    ContributionComponent,
   ],
   imports: [
     BrowserModule,

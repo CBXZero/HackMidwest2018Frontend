@@ -9,7 +9,11 @@ export class PollService {
 
   public GetTestDatePoll() {
     return {
-      type: "Date"
+      type: "Date",
+      options: [
+        {date: "7/21/2018", time: "5pm"},
+        {date: "7/22/2018", time: "5pm"}
+      ]
     }
   }
 }

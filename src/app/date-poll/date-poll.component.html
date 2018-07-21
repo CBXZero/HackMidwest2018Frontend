@@ -5,6 +5,6 @@
   </h2>
 
   <ul class="date-poll-list">
-    
+    <app-date-item *ngFor="let date of dates" [option]="date"></app-date-item>
   </ul>
 </legend>
