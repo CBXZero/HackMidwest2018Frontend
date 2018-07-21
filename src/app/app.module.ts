@@ -44,6 +44,10 @@ const appRoutes : Routes = [
   {
     path: 'poll',
     component: PollPageComponent
+  },
+  {
+    path: 'create-event',
+    component: CreateEventPageComponent
   }
 ]
 
