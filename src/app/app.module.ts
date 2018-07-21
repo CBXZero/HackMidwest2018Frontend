@@ -27,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { InviteGuestPageComponent } from './invite-guest-page/invite-guest-page.component';
+import { ViewEventComponent } from './view-event/view-event.component';
 
 const appRoutes : Routes = [
   {
@@ -66,6 +67,7 @@ const appRoutes : Routes = [
     EditContributionsPageComponent,
     DynamicListComponent,
     InviteGuestPageComponent,
+    ViewEventComponent,
   ],
   imports: [
     BrowserModule,
