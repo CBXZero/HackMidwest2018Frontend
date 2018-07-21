@@ -31,13 +31,17 @@ export class DynamicListComponent implements OnInit {
         var element = (this.domContributions as any).last.nativeElement;
         element.focus();
       }, 0);
-      var newField = this.fb.control('')
+      var newField = this.fb.control('');
       this.contributions.push(newField);
     }
   }
 
   onEnter() {
     this.addContribution();
+  }
+
+  delete(entry) {
+    this.contributions.removeAt(entry);
   }
 
 }
