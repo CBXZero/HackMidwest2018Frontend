@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PollService } from '../services/poll.service';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-poll-page',
@@ -10,20 +11,21 @@ import { Router } from '@angular/router';
 })
 export class PollPageComponent implements OnInit {
   poll: { type: string; };
+  eventId: any;
 
-  constructor(public afAuth: AngularFireAuth, private pollService: PollService, private router: Router) { 
+  constructor(public afAuth: AngularFireAuth, private pollService: PollService, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.afAuth.user.subscribe(r => {
-      if(r) {
+      if (r) {
         // Get Data
-        this.poll = this.pollService.GetTestDatePoll();
+        
       } else {
         // Redirect to home
         this.router.navigate(['']);
       }
     });
   }
-
 }
+

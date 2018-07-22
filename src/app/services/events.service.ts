@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { EventModel } from '../../models/EventModel';
-import {ApolloModule, Apollo} from 'apollo-angular';
-import {HttpLinkModule, HttpLink} from 'apollo-angular-link-http';
-import {InMemoryCache} from 'apollo-cache-inmemory';
+import { ApolloModule, Apollo } from 'apollo-angular';
+import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
+import { InMemoryCache } from 'apollo-cache-inmemory';
 import gql from 'graphql-tag';
 
 @Injectable({
@@ -33,11 +33,27 @@ export class EventsService {
     });
   }
 
+  addEvent(data: any, email: any): any {
+    return this.apollo.mutate({
+      mutation: gql`
+        mutation{
+          createEvent(event: {
+            title: "${data.title}"
+          }, email: "${email}") {
+            title
+            description,
+            eventId
+          }
+        }
+      `
+    });
+  }
+
   public getTestData(): EventModel[] {
     return [
-      {name: "Hello World", description: "This is my first event"},
-      {name: "Charlie is really cool", description: "This is my second event!"},
-      {name: "Charlie Triplett is the coolest!", description: "This is my third event!"}
+      { name: "Hello World", description: "This is my first event" },
+      { name: "Charlie is really cool", description: "This is my second event!" },
+      { name: "Charlie Triplett is the coolest!", description: "This is my third event!" }
     ];
   }
 }

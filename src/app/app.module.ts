@@ -60,7 +60,7 @@ const appRoutes : Routes = [
     component: EditContributionsPageComponent
   },
   {
-    path: 'invite-guests',
+    path: 'invite-guests/:id',
     component: InviteGuestPageComponent
   },
   {
