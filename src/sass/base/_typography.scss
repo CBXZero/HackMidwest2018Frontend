@@ -19,11 +19,12 @@ $sans:   "Avenir Next Variable";
 $serif:   "Avenir Next Variable";
 $display: "Avenir Next Variable";
 
-$light:   200;
+$light:   400;
 $regular: 400;
-$demi:    600;
-$bold:    700;
+$demi:    500;
+$bold:    600;
 $black:   700;
+
 
 body,
 html {
@@ -36,6 +37,7 @@ html {
   font-family: $sans, sans-serif;
   font-weight: $regular;
   font-style: normal;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
 }
 @mixin light-italic {
   font-family: $display, sans-serif;
@@ -47,6 +49,8 @@ html {
   font-family: $display, sans-serif;
   font-weight: $regular;
   font-style: normal;
+  font-variation-settings: 'wght' 400, 'wdth' 80;
+
 }
 @mixin italic {
   font-family: $display, sans-serif;
@@ -58,12 +62,15 @@ html {
   font-family: $display, sans-serif;
   font-weight: $demi;
   font-style: bold;
+  font-variation-settings: 'wght' 500, 'wdth' 100;
 }
 
 @mixin bold {
   font-family: $display, sans-serif;
   font-weight: $bold;
   font-style: bold;
+  font-variation-settings: 'wght' 700, 'wdth' 100;
+
 }
 @mixin bold-italic {
   font-family: $display, sans-serif;
@@ -92,8 +99,10 @@ html {
   font-size: 4rem;
   @include medium;
   line-height: 2rem;
-  color: $color-smoke;
-  text-shadow: 0 -1px 0 darken($color-blue,10);
+  color: $color-gray;
+  padding: 0rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 -1px 0 #fff;
   @include break($break-mid) {
     font-size: 3rem;
     line-height: 6rem;
@@ -102,13 +111,14 @@ html {
 
 .h-bravo,
 .user-generated h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-variation-settings: 'wght' 550, 'wdth' 100;
   color: $color-gray;
-  padding: 0rem 0 2rem 0;
+  padding: 0rem;
+  margin-bottom: 2rem;
   text-shadow: 0 1px 0 #fff, 0 1px 2px darken($color-smoke,10)  ;
   @include break($break-mid) {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
 }

@@ -32,22 +32,25 @@ form {
   input[type=checkbox] + label,
   input[type=radio] + label {
     display: grid;
+    border-radius: 2px;
     grid-template-columns: 1fr 2fr;
     padding: 1rem .25rem .625rem 3.25rem;
-    background: #eee;
+    background: #fff;
+    box-shadow: 0 1px 4px -2px rgba(#000,.4);
     position: relative;
     color: $color-charcoal;
     transition: .2s;
     font-size: .9rem;
     text-align: left;
-    border: 1px solid $color-gray-light;
+    border: 1px solid #fff;
     @include regular;
   }
   
   input[type=checkbox]:checked + label,
   input[type=radio]:checked + label {
       background: lighten($color-green,60);
-  }
+      border: 1px solid $color-green;
+    }
   
   input[type=checkbox] + label:hover,
   input[type=radio] + label:hover,
@@ -58,7 +61,7 @@ form {
   
   input[type=checkbox]:checked:focus + label,
   input[type=radio]:checked:focus + label {
-    border: 1px solid $color-gray;
+    border: 1px solid $color-green;
   }
   
   
