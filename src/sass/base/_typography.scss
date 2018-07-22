@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Avenir Next Variable";
-  src: url("/fonts/AvenirNext_Variable.ttf") format("truetype");
+  src: url("/assets/fonts/AvenirNext_Variable.ttf") format("truetype");
 }
 
 $sans:   "Avenir Next Variable";
@@ -49,7 +49,7 @@ html {
   font-family: $display, sans-serif;
   font-weight: $regular;
   font-style: normal;
-  font-variation-settings: 'wght' 400, 'wdth' 80;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
 
 }
 @mixin italic {

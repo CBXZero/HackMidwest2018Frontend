@@ -10,6 +10,7 @@ $color-blue:            #073147;
 $color-light-blue:      lighten($color-blue,20);
 $color-blue-highlight:  lighten($color-blue,30);
 $color-blue-dark:       darken($color-blue,10);
+$color-blue-smoke:      lighten($color-blue,70);
 
 
 $color-caribbean:       #0C8790;
@@ -26,7 +27,7 @@ $color-green-dark:      darken($color-green,10);
 $color-charcoal:		#222;
 $color-gray:			#777;
 $color-gray-light:	    #cecece;
-$color-smoke:			#f4f4f4;
+$color-smoke:			#f3f3f3;
 
 // Type
 
