@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { EventsService } from '../events.service';
+import { EventsService } from '../services/events.service';
 import { EventModel } from '../../models/EventModel';
 
 @Component({
@@ -10,7 +10,7 @@ import { EventModel } from '../../models/EventModel';
 })
 export class EventsComponent implements OnInit {
 
-  events: EventModel[];
+  events: any;
 
   // name
   // description
@@ -22,7 +22,10 @@ export class EventsComponent implements OnInit {
   ngOnInit() {
     this.afAuth.user.subscribe(r => {
       if(r){
-        this.events = this.eventService.getTestData();
+        this.eventService.getEventsForUser(r.email).subscribe(r => {
+          var results = r.data as any;
+          this.events = results.contact.ownedEvents;
+        });
       } else {
         // Redirect to home
       }

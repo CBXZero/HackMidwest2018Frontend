@@ -2,22 +2,27 @@
   <nav>
     <div class="container">
       <ul class="primary-nav-list">
-          <li class="primary-nav-item home">
-            <a href="/">
-              Home
-            </a>
-          </li>
-          <li class="primary-nav-item events">
-              <a href="/events/">
-              My Events
-            </a>
-          </li>
-          <li class="primary-nav-item sign-in">
-            <button type="button">
-              Sign In
-            </button>
-          </li>
-        </ul>
+        <li class="primary-nav-item home">
+          <a [routerLink]="'/'">
+            Home
+          </a>
+        </li>
+        <li class="primary-nav-item events">
+          <a [routerLink]="'/events/'">
+            My Events
+          </a>
+        </li>
+        <li class="primary-nav-item sign-in" *ngIf="!user">
+          <button type="button" (click)="login()">
+            Sign In
+          </button>
+        </li>
+        <li class="primary-nav-item sign-out" *ngIf="user">
+          <button type="button" (click)="logout()">
+            Sign Out
+          </button>
+        </li>
+      </ul>
     </div>
   </nav>
 </header>
