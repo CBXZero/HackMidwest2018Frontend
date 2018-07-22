@@ -1,13 +1,26 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <a class="navbarLink" [routerLink]="'/home'"><span>Test</span></a>
-    <span class="spacer"></span>
-    <a class="navbarLink" [routerLink]="'/events'"><span *ngIf="user">Events</span></a>
-    <button mat-button *ngIf="!user" (click)="login()">Login</button>
-    <button mat-button *ngIf="user" (click)="logout()">Logout</button>
-  </mat-toolbar-row>
-</mat-toolbar>
+<header>
+  <nav>
+    <div class="container">
+      <ul class="primary-nav-list">
+          <li class="primary-nav-item home">
+            <a href="/">
+              Home
+            </a>
+          </li>
+          <li class="primary-nav-item events">
+              <a href="/events/">
+              My Events
+            </a>
+          </li>
+          <li class="primary-nav-item sign-in">
+              <a href="/sign-in/">
+              Sign In
+            </a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</header>
 <div style="text-align:center">
   <router-outlet></router-outlet>
 </div>
