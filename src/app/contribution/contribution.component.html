@@ -1,5 +1,5 @@
 <li class="contribution-poll-item">
-  <input type="checkbox" #checked id="this_contribution_item">
+  <input type="checkbox" #checked [attr.id]="'this_contribution_item' + last-name">
   <label for="this_contribution_item">
     <span class="contribution-item-name">
       {{name}}

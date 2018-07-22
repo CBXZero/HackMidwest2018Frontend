@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
-import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { ActivatedRoute, Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-edit-contributions-page',
@@ -13,7 +13,7 @@ export class EditContributionsPageComponent implements OnInit {
   id: string;
   data: {}[];
 
-  constructor(private route: ActivatedRoute, private afDb: AngularFireDatabase) {
+  constructor(private route: ActivatedRoute, private afDb: AngularFireDatabase, private router: Router) {
     this.route.paramMap.subscribe(r => {
       this.id = r.get('id');
     });
@@ -25,6 +25,7 @@ export class EditContributionsPageComponent implements OnInit {
 
   save() {
     this.afDb.object(this.id).set(this.data);
+    this.router.navigate(['events']);
   }
 
   ngOnInit(): void {
