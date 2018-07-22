@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EventsComponent } from './events/events.component';
@@ -89,7 +88,6 @@ const appRoutes : Routes = [
     BrowserModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     MatCardModule,

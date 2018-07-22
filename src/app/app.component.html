@@ -4,11 +4,10 @@
     <a class="navbarLink" href="/"><span>Insert Cool Name here</span></a>
     <span class="spacer"></span>
     <a class="navbarLink" href="/events"><span *ngIf="user">Events</span></a>
-    <button mat-button *ngIf="!user" (click)="login()"><mat-icon class="icon">person</mat-icon></button>
+    <button mat-button *ngIf="!user" (click)="login()">Login</button>
     <button mat-button *ngIf="user" (click)="logout()">Logout</button>
   </mat-toolbar-row>
 </mat-toolbar>
 <div style="text-align:center">
   <router-outlet></router-outlet>
 </div>
-
