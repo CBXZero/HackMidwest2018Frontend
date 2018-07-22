@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PollService } from '../poll.service';
+import { PollService } from '../services/poll.service';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 
