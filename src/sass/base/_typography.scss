@@ -96,7 +96,7 @@ html {
 }
 
 .h-alpha {
-  font-size: 4rem;
+  font-size: 2rem;
   @include medium;
   color: $color-gray;
   padding: 0rem;
@@ -104,7 +104,7 @@ html {
   text-shadow: 0 -1px 0 #fff;
   @include break($break-mid) {
     font-size: 3rem;
-    line-height: 6rem;
+    line-height: 3rem;
   }
 }
 
