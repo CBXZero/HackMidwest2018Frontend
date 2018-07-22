@@ -49,7 +49,7 @@ export class InviteGuestPageComponent implements OnInit {
       var eventId = this.eventId;
       var name = (r.data as any).title;
       this.textingService.sendMessages(name, eventId, this.contacts.value).subscribe(r => {
-        this.router.navigate(['/events'])
+        this.router.navigate(['/edit-contributions', this.eventId])
       })
     });
   }

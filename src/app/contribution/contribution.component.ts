@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contribution',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contribution.component.css']
 })
 export class ContributionComponent implements OnInit {
-
+  @Input() name: string;
   constructor() { }
 
   ngOnInit() {

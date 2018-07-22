@@ -5,13 +5,17 @@
                 My fantastic latin paradise fiesta 2018
             </h1>
             <p class="event-description">
-                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.            
+                Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat.
             </p>
             <p>
-                Hosted by:<br/>
+                Hosted by:
+                <br/>
                 <span class="host">FirstName Lastname</span>
             </p>
         </div>
+    </div>
+    <div>
+        <app-contribution *ngFor="let item of data" [name]="item"></app-contribution>
     </div>
     <app-date-poll [poll]="pollData" *ngIf="pollData"></app-date-poll>
 </div>
