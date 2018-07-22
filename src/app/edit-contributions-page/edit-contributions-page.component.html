@@ -4,4 +4,6 @@
     </ul>
 </div>
 
-<app-dynamic-list></app-dynamic-list>
+<app-dynamic-list (items)="dataUp($event)"></app-dynamic-list>
+
+<button (click)="save()">Save</button>
