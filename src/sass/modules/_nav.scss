@@ -3,11 +3,9 @@ header {
     position: relative;
     z-index: 3;
     @include clearfix;
-    margin-bottom: 2rem;
   
     nav {
       display: block;
-      padding-bottom: 1rem;
       margin: 0px auto;
 
   

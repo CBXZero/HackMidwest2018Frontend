@@ -1,9 +1,16 @@
 .edit-event {
+
+    .h-alpha {
+        margin-top: 2rem;
+    }
+
 }
 
 .get-started{
-    margin-bottom: 2rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
     @include clearfix;
+    text-align: center;
 }
 
 .event-editor-list {
@@ -13,7 +20,6 @@
 }
 
 .event-editor-item {
-
     .columns {
         display: grid;
         grid-template-columns: 1fr 1fr;   
