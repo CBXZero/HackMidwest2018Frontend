@@ -10,21 +10,17 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./poll-page.component.css']
 })
 export class PollPageComponent implements OnInit {
-  poll: { type: string; };
+
   eventId: any;
+  pollData: { type: string; options: { startTime: Date; endTime: Date; }[]; };
 
   constructor(public afAuth: AngularFireAuth, private pollService: PollService, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-    this.afAuth.user.subscribe(r => {
-      if (r) {
-        // Get Data
-        
-      } else {
-        // Redirect to home
-        this.router.navigate(['']);
-      }
+    this.route.paramMap.subscribe(r => {
+      this.eventId = r.get('id');
+      this.pollData = this.pollService.GetTestDatePoll();
     });
   }
 }

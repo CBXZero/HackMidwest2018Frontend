@@ -1,11 +1,10 @@
-
 <legend>
   <h2 class="h-bravo">
     Choose your preferred date
   </h2>
 
   <ul class="date-poll-list">
-    <app-date-item *ngFor="let date of dates" [option]="date"></app-date-item>
+    <app-date-item *ngFor="let date of dates; let i=index" [option]="date" [index]="i"></app-date-item>
   </ul>
 </legend>
 

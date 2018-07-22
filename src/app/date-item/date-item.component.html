@@ -1,7 +1,7 @@
 <li class="date-poll-item">
-  <input type="checkbox" id="this_date_time">
-  <label for="this_date_time">
-    
+  <input type="checkbox" [attr.id]="'this_date_time' + index">
+  <label [attr.for]="'this_date_time' + index">
+
     <span class="date">
       <span class="day">
         {{startDayOfWeek}}
@@ -31,7 +31,7 @@
         </span>
       </span>
     </span>
-    
+
     <span class="current-results">
       3 others chose this
     </span>

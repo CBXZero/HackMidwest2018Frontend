@@ -49,7 +49,7 @@ const appRoutes : Routes = [
     component: EventsComponent
   },
   {
-    path: 'poll',
+    path: 'poll/:id',
     component: PollPageComponent
   },
   {

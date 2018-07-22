@@ -9,6 +9,7 @@ import * as moment from 'moment';
 export class DateItemComponent implements OnInit {
 
   @Input() option: { startTime: Date; endTime: Date; };
+  @Input() index: string;
   startDayOfWeek: string;
   startMonth: string;
   startDayOfMonth: string;
