@@ -1,6 +1,6 @@
 <div class="container edit-event" [formGroup]="createEventForm">
   <h2>
-    Create an Events
+    Create an Event
   </h2>
 
   <ul class="event-editor-list">
@@ -25,12 +25,6 @@
       <input id="event-location" type="text" formControlName="location" />
     </li>
 
-    <li class="event-editor-item">
-      <label for="event-url">
-        Custom Website
-      </label>
-      <input id="event-url" type="text" formControlName="website" />
-    </li>
 
     <li class="event-editor-item">
       <label for="event-start-date">
@@ -79,7 +73,6 @@
       </legend>
     </li>
 
-
     <li class="event-editor-item">
       <legend>
         <h2 class="h-bravo">Guest Options</h2>
@@ -115,7 +108,7 @@
     </li>
 
     <li class="event-editor-item">
-      <button>Submit</button>
+      <button class="button green">Submit</button>
     </li>
 
   </ul>

@@ -14,9 +14,18 @@
         .event-title {
             color: $color-charcoal;
             font-size: 1.5rem;
+            margin-bottom: 2rem;
             @include break($break-mid) {
                 font-size: 2rem;
               }
         }
+        .event-description {
+            border-bottom: 1px solid $color-gray-light;
+            margin-bottom: 1rem;
+
+        }
+    }
+    .host {
+        @include bold;
     }
 }

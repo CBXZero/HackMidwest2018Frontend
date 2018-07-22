@@ -1,83 +1,122 @@
 
 .animate {
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  padding: 1rem 3rem;
+  margin: 0px auto;
+  float: none;
+  display: inline-block;
+  border-radius: .25rem;
+  font-size: 1rem;
+  color: #FFF;
+  text-decoration: none;
+  background-color: $color-green;
+  box-shadow: 0 5px 0 0 darken($color-green,12);
+  text-shadow: 0px -2px #669644;
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    transform: translate(0px,3px);
+    -webkit-transform: translate(0px,3px);
+    box-shadow: 0 1px 0 0 darken($color-green,12);
+
   }
-  
-  .button {
-    position: relative;
-    padding: 1rem 3rem;
-    margin: 0px auto;
-    float: none;
-    display: inline-block;
-    border-radius: .25rem;
-    font-size: 1rem;
-    color: #FFF;
-    text-decoration: none;
-    background-color: $color-green;
-    box-shadow: 0 5px 0 0 darken($color-green,12);
-    text-shadow: 0px -2px #669644;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
-  
-  
+  &.blue {
+    background-color: $color-light-blue;
+    text-shadow: 0px -1px darken($color-blue,8);
+    box-shadow: 0 5px 0 0  darken($color-blue,8);
+    color: $color-gray-light;
+
     &:hover,
     &:focus {
-      color: #fff;
-      transform: translate(0px,3px);
-      -webkit-transform: translate(0px,3px);
-      box-shadow: 0 1px 0 0 darken($color-green,12);
-  
-    }
-    &.blue {
-      background-color: $color-blue;
-      @include linear-gradient(rgba(lighten($color-blue,10),.7), rgba($color-blue,.7));
-      text-shadow: 0px -1px darken($color-blue,8);
-      box-shadow: 0 3px 0 0  darken($color-blue,8);
-      color: $color-gray-light;
-  
-      &:hover,
-      &:focus {
-        background-color: lighten($color-blue,10);
-        box-shadow: 0 1px 0 0  darken($color-blue,8);
-        color: lighten($color-gray-light,8)
-      }
-    }
-    
-    &.gray {
-      background-color: $color-gray;
-      text-shadow: 0px -2px darken($color-gray,12);
-      box-shadow: 0 3px 0 0  darken($color-gray,12);
-      &:hover,
-      &:focus {
-        box-shadow: 0 1px 0 0  darken($color-gray,12);
-      }
-    }
-  
-
-    &.charcoal {
-      background-color: $color-charcoal;
-      text-shadow: 0px -2px darken($color-charcoal,12);
-      box-shadow: 0 3px 0 0  darken($color-charcoal,12);
-      &:hover,
-      &:focus {
-        box-shadow: 0 1px 0 0  darken($color-charcoal,12);
-      }
-    }
-  
-    &.red {
-      background-color: $color-red;
-      text-shadow: 0px -2px darken($color-red,12);
-      box-shadow: 0 3px 0 0  darken($color-red,12);
-      &:hover,
-      &:focus {
-        box-shadow: 0 1px 0 0  darken($color-red,12);
-      }
-    }
-  
-    &.yellow {
-      background-color: #F2CF66;
-      text-shadow: 0px -2px #D1B358;
+      background-color: lighten($color-blue,10);
+      box-shadow: 0 1px 0 0  darken($color-blue,8);
+      color: lighten($color-gray-light,8)
     }
   }
   
+  &.gray {
+    background-color: $color-gray;
+    text-shadow: 0px -2px darken($color-gray,12);
+    box-shadow: 0 3px 0 0  darken($color-gray,12);
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 0 0  darken($color-gray,12);
+    }
+  }
+  
+  &.charcoal {
+    background-color: $color-charcoal;
+    text-shadow: 0px -2px darken($color-charcoal,12);
+    box-shadow: 0 3px 0 0  darken($color-charcoal,12);
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 0 0  darken($color-charcoal,12);
+    }
+  }
+
+  &.red {
+    background-color: $color-red;
+    text-shadow: 0px -2px darken($color-red,12);
+    box-shadow: 0 3px 0 0  darken($color-red,12);
+    &:hover,
+    &:focus {
+      box-shadow: 0 1px 0 0  darken($color-red,12);
+    }
+  }
+
+  &.yellow {
+    background-color: #F2CF66;
+    text-shadow: 0px -2px #D1B358;
+  }
+}
+
+.delete {
+  padding: 0;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 3px;
+  text-indent: -9999px;
+  background-color: $color-gray;
+  background-image: url(/assets/images/ui/delete.svg);
+
+
+  &:hover,
+  &:focus {
+    background-color: $color-red;
+
+  }
+
+  .text-container {
+    position: relative;
+    &:before,
+    &:after  {
+      content: '';
+      position: absolute;
+      width: 1rem;
+      height: .25rem;
+      top: -.125rem;;
+      left: calc(50% - .5rem);
+      background: #fff;
+      display: block;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      left: calc(50% - .5rem);
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -3,6 +3,7 @@ body,html {
     padding: 0;
     background: $color-smoke;
     height: 100%;
+    text-align: left;
   }
   
   
@@ -90,7 +91,10 @@ body,html {
     list-style-type: lower-roman;
   }
   
-  
+  div {
+    text-align: left;
+    
+  }
   
   
   a {

@@ -1,9 +1,15 @@
 .edit-event {
 }
 
+.get-started{
+    margin-bottom: 2rem;
+    @include clearfix;
+}
+
 .event-editor-list {
     max-width: $break-small;
     margin: 0px auto;
+    margin-bottom: 2rem;
 }
 
 .event-editor-item {
@@ -14,6 +20,7 @@
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
         border-radius: 2px;
+        margin-bottom: 3rem;
     }
 }
 

@@ -1,12 +1,9 @@
 header {
-    background-color: $color-smoke;  
+    background-color: #fff;  
     position: relative;
     z-index: 3;
     @include clearfix;
-    @include break($break-large) {
-      width: auto;
-    }
-
+    margin-bottom: 2rem;
   
     nav {
       display: block;
@@ -34,9 +31,12 @@ header {
             flex-grow: 10;
             text-align: left;
           }
-          a {
+          a,
+          button {
             display: block;
-            padding: 1.5rem 0rem .35rem 0rem;
+            border: none;
+            background: none;
+            padding: 1rem 0rem .35rem 0rem;
             text-decoration: none;
             text-shadow: 0 1px 0 #fff;
             color: darken($color-gray,4);
@@ -53,7 +53,6 @@ header {
             }
   
             @include break($break-small) {
-              padding: 1.5rem 0rem  .35rem 0rem;
               font-size: 1.5rem;
             }
             }
