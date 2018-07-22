@@ -9,7 +9,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { EventsComponent } from './events/events.component';
 import { firebaseConfig } from './config';
-import { EventsService } from './events.service';
+import { EventsService } from './services/events.service';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DatePollComponent } from './date-poll/date-poll.component';
@@ -29,6 +29,9 @@ import { InviteGuestPageComponent } from './invite-guest-page/invite-guest-page.
 import { ViewEventComponent } from './view-event/view-event.component';
 import { EditEventPageComponent } from './edit-event-page/edit-event-page.component';
 import { EventInfoBoxComponent } from './event-info-box/event-info-box.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApolloModule } from 'apollo-angular';
+import { HttpLinkModule } from 'apollo-angular-link-http';
 
 const appRoutes : Routes = [
   {
@@ -95,6 +98,9 @@ const appRoutes : Routes = [
     MatInputModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ApolloModule,
+    HttpLinkModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }

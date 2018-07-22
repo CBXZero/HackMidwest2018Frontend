@@ -1,0 +1,43 @@
+import { Injectable } from '@angular/core';
+import { EventModel } from '../../models/EventModel';
+import {ApolloModule, Apollo} from 'apollo-angular';
+import {HttpLinkModule, HttpLink} from 'apollo-angular-link-http';
+import {InMemoryCache} from 'apollo-cache-inmemory';
+import gql from 'graphql-tag';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EventsService {
+
+  constructor(public apollo: Apollo, httpLink: HttpLink) {
+    apollo.create({
+      link: httpLink.create({
+        uri: 'https://localhost:5025/graphql'
+      }),
+      cache: new InMemoryCache()
+    });
+  }
+
+  public getEventsForUser(email: string) {
+    return this.apollo.query({
+      query: gql`
+      {
+        contact(email: "${email}") {
+          ownedEvents {
+            title
+            description
+          }
+        }
+      }`
+    });
+  }
+
+  public getTestData(): EventModel[] {
+    return [
+      {name: "Hello World", description: "This is my first event"},
+      {name: "Charlie is really cool", description: "This is my second event!"},
+      {name: "Charlie Triplett is the coolest!", description: "This is my third event!"}
+    ];
+  }
+}

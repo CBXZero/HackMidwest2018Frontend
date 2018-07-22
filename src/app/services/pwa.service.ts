@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SwUpdate } from '../../../node_modules/@angular/service-worker';
+import { SwUpdate } from '@angular/service-worker';
 
 @Injectable({
   providedIn: 'root'
