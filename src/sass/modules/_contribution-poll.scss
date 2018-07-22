@@ -2,11 +2,27 @@
 
 .contribution-poll-list {
     display: block;
+    max-width: $break-small;
+
+    margin: 0px auto;
     @include clearfix;
 }
 
 .contribution-poll-item {
     display: block;
     @include clearfix;
-    padding: 1rem;
+    position: relative;
+
+    .contributor {
+        text-align: right;
+    }
+
+    input[type=checkbox] + label {
+        &:hover,
+        &:focus {
+            .last-name {
+                position: relative !important;
+            }
+        }
+    }
 }
