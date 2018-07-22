@@ -1,0 +1,174 @@
+.wf-loading a,
+.wf-loading .h-alpha,
+.wf-loading .h-bravo,
+.wf-loading p,
+.wf-loading cite {
+  font-family: "droid-sans", Arial;
+  visibility: hidden;
+}
+.wf-active {
+  visibility: visible;
+}
+
+@font-face {
+  font-family: "Avenir Next Variable";
+  src: url("/fonts/AvenirNext_Variable.ttf") format("truetype");
+}
+
+$sans:   "Avenir Next Variable";
+$serif:   "Avenir Next Variable";
+$display: "Avenir Next Variable";
+
+$light:   200;
+$regular: 400;
+$demi:    600;
+$bold:    700;
+$black:   700;
+
+body,
+html {
+  font-family: $sans, sans-serif;
+  color: darken($color-gray,9);
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+@mixin light {
+  font-family: $sans, sans-serif;
+  font-weight: $regular;
+  font-style: normal;
+}
+@mixin light-italic {
+  font-family: $display, sans-serif;
+  font-weight: $light;
+  font-style: italic;
+}
+
+@mixin regular {
+  font-family: $display, sans-serif;
+  font-weight: $regular;
+  font-style: normal;
+}
+@mixin italic {
+  font-family: $display, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin medium {
+  font-family: $display, sans-serif;
+  font-weight: $demi;
+  font-style: bold;
+}
+
+@mixin bold {
+  font-family: $display, sans-serif;
+  font-weight: $bold;
+  font-style: bold;
+}
+@mixin bold-italic {
+  font-family: $display, sans-serif;
+  font-weight: $bold;
+  font-style: italic;
+}
+//@mixin black {
+//  font-family: $serif, sans-serif;
+//  font-weight: 800;
+//}
+@mixin headline {
+  font-family: $display, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  //letter-spacing: 1px;
+  //text-transform: uppercase;
+}
+
+@mixin sans {
+  font-family: "Arial", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.h-alpha {
+  font-size: 4rem;
+  @include medium;
+  line-height: 2rem;
+  color: $color-smoke;
+  text-shadow: 0 -1px 0 darken($color-blue,10);
+  @include break($break-mid) {
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+}
+
+.h-bravo,
+.user-generated h2 {
+  font-size: 2rem;
+  font-variation-settings: 'wght' 550, 'wdth' 100;
+  color: $color-gray;
+  padding: 0rem 0 2rem 0;
+  text-shadow: 0 1px 0 #fff, 0 1px 2px darken($color-smoke,10)  ;
+  @include break($break-mid) {
+    font-size: 3rem;
+  }
+
+}
+
+.h-charlie,
+.user-generated h3 {
+  font-size: 1.25rem;
+  font-variation-settings: 'wght' 600, 'wdth' 100;
+  color: darken($color-gray,4);
+  padding: 0;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 0 #fff, 0 1px 2px darken($color-smoke,10)  ;
+}
+
+.h-delta,
+.user-generated h4 {
+  font-size: 1rem;
+  @include bold;
+  color: $color-gray;
+  padding: 1rem 0;
+}
+
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+
+p {
+  font-size: 1rem;
+  @include light;
+  line-height: 1.625rem;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  a {
+    color: $color-blue;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+
+
+strong {
+  @include bold;
+}
+
+
+blockquote {
+  margin: 0;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+
+.center-text {
+  text-align: center;
+}
