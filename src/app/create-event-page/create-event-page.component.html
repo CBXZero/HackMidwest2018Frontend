@@ -1,26 +1,26 @@
 <div class="container edit-event" [formGroup]="createEventForm">
-  <h2>
-    Create an Event
-  </h2>
+  <h1 class="h-alpha center-text">
+    Create your event
+  </h1>
 
   <ul class="event-editor-list">
     <li class="event-editor-item">
       <label for="event-title">
-        Event Title
+        Event title
       </label>
       <input id="event-title" type="text" formControlName="title" />
     </li>
 
     <li class="event-editor-item">
       <label for="event-description">
-        Event Description
+        Event description
       </label>
       <input id="event-description" type="text" formControlName="description" />
     </li>
 
     <li class="event-editor-item">
       <label for="event-location">
-        Event Location
+        Event location
       </label>
       <input id="event-location" type="text" formControlName="location" />
     </li>
@@ -28,14 +28,14 @@
 
     <li class="event-editor-item">
       <label for="event-start-date">
-        Start Date &amp; Time
+        Start date &amp; time
       </label>
       <input id="event-start-date" type="text" formControlName="startTime" />
     </li>
 
     <li class="event-editor-item">
       <label for="event-end-date">
-        End Date &amp; Time
+        End date &amp; time
       </label>
       <input id="event-end-date" type="text" formControlName="endTime" />
     </li>
@@ -46,14 +46,14 @@
       <ul class="create-date-poll-list">
         <li class="event-editor-item">
           <label for="event-start-date">
-            Start Date &amp; Time
+            Start date &amp; time
           </label>
           <input id="event-start-date" type="text" />
         </li>
 
         <li class="event-editor-item">
           <label for="event-end-date">
-            End Date &amp; Time
+            End date &amp; tdme
           </label>
           <input id="event-end-date" type="text" />
         </li>
@@ -63,7 +63,7 @@
 
     <li class="event-editor-item">
       <legend class="columns">
-        <h2 class="h-bravo">Event Visibility</h2>
+        <h2 class="h-bravo">Event visibility</h2>
         <div class="columns">
           <input type="radio" name="visibility" id="public" value="public" formControlName="visibility">
           <label for="public">Public</label>
@@ -75,7 +75,7 @@
 
     <li class="event-editor-item">
       <legend>
-        <h2 class="h-bravo">Guest Options</h2>
+        <h2 class="h-bravo">Guest options</h2>
         <p>Are you open to your guests bringing a friend?</p>
         <div class="columns">
           <input type="radio" name="guestOptions" id="open" value="open" formControlName="guestOptions">
@@ -89,7 +89,7 @@
 
     <li class="event-editor-item">
       <legend>
-        <h2 class="h-bravo">Dress Code</h2>
+        <h2 class="h-bravo">Dress code</h2>
         <div class="columns">
             <input type="radio" name="dressCode" id="whatever" value="whatever" formControlName="dressCode">
             <label for="whatever">Whatever</label>

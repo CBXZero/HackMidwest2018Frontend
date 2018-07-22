@@ -1,0 +1,153 @@
+
+
+.intro {
+    padding-top: 50vh;
+    background: url('/assets/images/heroes/dinner-party-alpha.png');
+    background-repeat: none;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include break($break-mid) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-title {
+        font-size: 3rem;
+        line-height: 3rem;
+        line-height: auto;
+        text-align: center;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        color: #fff;
+        @include bold;
+        margin: 0;
+        padding: 1rem;
+        text-shadow: 0 1px 3px #000;
+
+    }
+    .subhead {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        text-align: center;
+        background: rgba(#000,.8);
+        color: #fff;
+        padding: 1rem;
+        margin-bottom: -.5rem;
+    }
+    .button {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        margin-bottom: -1.5rem;
+    }
+
+}
+
+.section-bravo {
+    padding-top: 3rem;
+    display: grid;
+    @include linear-gradient(#fff,$color-smoke);
+    grid-template-columns: 1fr 1fr 1fr;
+    @include break($break-mid) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .feature-list {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        margin-bottom: 1.5rem;
+        @include break($break-mid) {
+            grid-column: 1 / 3;
+        }
+
+        .feature-item {
+            display: block;
+            padding: 1rem 1rem 1rem 3rem;
+            position: relative;
+            font-size: 1.25rem;
+        
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                -ms-transform: rotate(45deg); /* IE 9 */
+                -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                transform: rotate(45deg);
+                background: transparent;
+                border: none;
+                top: calc(.75rem + 1px);
+                left: 1rem;
+                height: 19px;
+                width: 10px;
+                border-right: 3px solid rgba(#000,.3);
+                border-bottom: 3px solid rgba(#000,.3);
+              }
+              
+              &:after {
+                content: '';
+                display: block;
+                position: absolute;
+
+                -ms-transform: rotate(45deg); /* IE 9 */
+                -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+                transform: rotate(45deg);
+                background: transparent;
+                border: none;
+                top: calc(.75rem);
+                left: 1rem;
+
+                height: 19px;
+                width: 10px;
+                border-right: 3px solid  $color-green;
+                border-bottom: 3px solid  $color-green;
+              }
+
+        }
+
+    }
+    .desktop-view {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+        @include break($break-mid) {
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;       
+        }
+    }
+    .mobile-view {
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+        @include break($break-mid) {
+            grid-column: 3 / 5;
+            grid-row: 1 / 4;       
+        }
+
+    }
+}
+
+.section-charlie {
+    .standard-three-things {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 2rem;
+        padding: 2rem 0;
+        @include break($break-mid) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .standard-item {
+            border: 1px solid red;
+            padding: 2rem;
+        }
+    }
+}
+
+.letter {
+    max-width: $break-small;
+    margin: 2rem auto;
+    background: #fff;
+    font-size: 1.5rem;
+    padding: 6rem 5rem;
+    box-shadow: 0 7px 20px -1px rgba(#000,.2);
+    p {
+        font-size: 1.25rem;
+
+    }
+}

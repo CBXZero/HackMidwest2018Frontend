@@ -31,8 +31,7 @@ header {
             flex-grow: 10;
             text-align: left;
           }
-          a,
-          button {
+          a {
             display: block;
             border: none;
             background: none;
@@ -44,7 +43,7 @@ header {
             overflow: hidden;
             position: relative;
             z-index: 1;
-            @include break(420px) {
+            @include break($break-mid) {
               font-size: 1.25rem;
               text-transform: uppercase;
               @include bold;
@@ -55,7 +54,19 @@ header {
             @include break($break-small) {
               font-size: 1.5rem;
             }
-            }
+          }
+          button {
+            display: block;
+            border: none;
+            background: $color-gray;
+            padding: .5rem;
+            font-size: .8rem;
+            margin-top: 1rem;
+            line-height: 1rem;
+            border-radius: 4px;
+            color: #fff;
+            @include bold;
+          }
           
         }
       }
