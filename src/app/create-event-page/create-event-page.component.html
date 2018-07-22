@@ -1,110 +1,115 @@
-<h2>
-  Create an Event
-</h2>>
+<div [formGroup]="createEventForm">
+  <h2>
+    Create an Event
+  </h2>
 
-<ul class="event-editor-list">
-  <li class="event-editor-item">
-    <label for="event-title">
-      Event Title
-    </label>
-    <input id="event-title" type="text"/>
-  </li>
+  <ul class="event-editor-list">
+    <li class="event-editor-item">
+      <label for="event-title">
+        Event Title
+      </label>
+      <input id="event-title" type="text" formControlName="title" />
+    </li>
 
-  <li class="event-editor-item">
-    <label for="event-description">
-      Event Description
-    </label>
-    <input id="event-description" type="text"/>
-  </li>
+    <li class="event-editor-item">
+      <label for="event-description">
+        Event Description
+      </label>
+      <input id="event-description" type="text" formControlName="description" />
+    </li>
 
-  <li class="event-editor-item">
-    <label for="event-location">
-      Event Location
-    </label>
-    <input id="event-location" type="text"/>
-  </li>
-  
-  <li class="event-editor-item">
-    <label for="event-url">
-      Custom Website
-    </label>
-    <input id="event-url" type="text"/>
-  </li>
-  
-  <li class="event-editor-item">
-    <label for="event-start-date">
-      Start Date &amp; Time
-    </label>
-    <input id="event-start-date" type="text"/>
-  </li>
-  
-  <li class="event-editor-item">
-    <label for="event-end-date">
+    <li class="event-editor-item">
+      <label for="event-location">
+        Event Location
+      </label>
+      <input id="event-location" type="text" formControlName="location" />
+    </li>
+
+    <li class="event-editor-item">
+      <label for="event-url">
+        Custom Website
+      </label>
+      <input id="event-url" type="text" formControlName="website" />
+    </li>
+
+    <li class="event-editor-item">
+      <label for="event-start-date">
+        Start Date &amp; Time
+      </label>
+      <input id="event-start-date" type="text" formControlName="startTime" />
+    </li>
+
+    <li class="event-editor-item">
+      <label for="event-end-date">
         End Date &amp; Time
       </label>
-    <input id="event-end-date" type="text"/>
-  </li>
-  
-  <li class="event-editor-item">
-    <button class="add add-date-poll" id="add-date-poll" type="button">Add a date poll</button>
+      <input id="event-end-date" type="text" formControlName="endTime" />
+    </li>
 
-    <ul class="create-date-poll-list">  
-      <li class="event-editor-item">
-        <label for="event-start-date">
+    <li class="event-editor-item">
+      <button class="add add-date-poll" id="add-date-poll" type="button">Add a date poll</button>
+
+      <ul class="create-date-poll-list">
+        <li class="event-editor-item">
+          <label for="event-start-date">
             Start Date &amp; Time
           </label>
-        <input id="event-start-date" type="text"/>
-      </li>
-      
-      <li class="event-editor-item">
-        <label for="event-end-date">
+          <input id="event-start-date" type="text" />
+        </li>
+
+        <li class="event-editor-item">
+          <label for="event-end-date">
             End Date &amp; Time
           </label>
-        <input id="event-end-date" type="text"/>
-      </li>
-    </ul>
+          <input id="event-end-date" type="text" />
+        </li>
+      </ul>
 
-  </li>
+    </li>
 
-  <li class="event-editor-item">
-    <legend>
-      <h2 class="h-bravo">Event Visibility</h2>
-      <input type="radio" name="visibility" id="public" value="public">
-      <label for="public">Public</label>
-      <input type="radio" name="visibility" id="private" value="private">
-      <label for="public">Private</label>
-    </legend>
-  </li>
-  
-
-  <li class="event-editor-item">
-    <legend>
-      <h2 class="h-bravo">Guest Options</h2>
-      <p>Are you open to your guests bringing a friend?</p>      
-      <input type="radio" name="friends" id="open" value="open">
-      <label for="public">Open</label>
-      <input type="radio" name="visibility" id="closed" value="closed">
-      <label for="public">Closed</label>
-    </legend>
-  </li>
+    <li class="event-editor-item">
+      <legend>
+        <h2 class="h-bravo">Event Visibility</h2>
+        <input type="radio" name="visibility" id="public" value="public" formControlName="visibility">
+        <label for="public">Public</label>
+        <input type="radio" name="visibility" id="private" value="private" formControlName="visibility">
+        <label for="public">Private</label>
+      </legend>
+    </li>
 
 
-  <li class="event-editor-item">
-    <legend>
-      <h2 class="h-bravo">Dress Code</h2>      
-      <input type="radio" name="dress-code" id="whatever" value="whatever">
-      <label for="public">Whatever</label>
-
-      <input type="radio" name="dress-code" id="dressy-casual" value="dressy-casual">
-      <label for="public">Dressy casual</label>
-
-      <input type="radio" name="dress-code" id="business" value="business">
-      <label for="public">Business</label>
-
-      <input type="radio" name="dress-code" id="formal" value="formal">
-      <label for="public">Formal</label>
-    </legend>
-  </li>
+    <li class="event-editor-item">
+      <legend>
+        <h2 class="h-bravo">Guest Options</h2>
+        <p>Are you open to your guests bringing a friend?</p>
+        <input type="radio" name="guestOptions" id="open" value="open" formControlName="guestOptions">
+        <label for="public">Open</label>
+        <input type="radio" name="guestOptions" id="closed" value="closed" formControlName="guestOptions">
+        <label for="public">Closed</label>
+      </legend>
+    </li>
 
 
-</ul>
+    <li class="event-editor-item">
+      <legend>
+        <h2 class="h-bravo">Dress Code</h2>
+        <input type="radio" name="dressCode" id="whatever" value="whatever" formControlName="dressCode">
+        <label for="public">Whatever</label>
+
+        <input type="radio" name="dressCode" id="dressy-casual" value="dressy-casual" formControlName="dressCode">
+        <label for="public">Dressy casual</label>
+
+        <input type="radio" name="dressCode" id="business" value="business" formControlName="dressCode">
+        <label for="public">Business</label>
+
+        <input type="radio" name="dressCode" id="formal" value="formal" formControlName="dressCode">
+        <label for="public">Formal</label>
+      </legend>
+    </li>
+
+    <li class="event-editor-item">
+      <button>Submit</button>
+    </li>
+
+  </ul>
+</div>

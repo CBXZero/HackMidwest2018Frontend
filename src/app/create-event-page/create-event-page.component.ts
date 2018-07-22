@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-event-page',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateEventPageComponent implements OnInit {
 
-  constructor() { }
+  createEventForm = this.fb.group({
+    title: '',
+    description: '',
+    location: '',
+    website: '',
+    startTime: '',
+    endTime: '',
+    visibility: '',
+    guestOptions: '',
+    dressCode: ''
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
   }
