@@ -13,7 +13,7 @@ export class EventsService {
   constructor(public apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
       link: httpLink.create({
-        uri: 'https://localhost:5025/graphql'
+        uri: 'http://partyplanner.azurewebsites.net/graphql'
       }),
       cache: new InMemoryCache()
     });
@@ -30,6 +30,19 @@ export class EventsService {
           }
         }
       }`
+    });
+  }
+
+  getEventById(eventId: string) {
+    return this.apollo.query({
+      query: gql`
+        {
+          event(id: ${eventId}){
+            title
+            description
+          }
+        }
+      `
     });
   }
 

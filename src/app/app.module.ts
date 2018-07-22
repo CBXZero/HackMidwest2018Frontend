@@ -32,6 +32,7 @@ import { EventInfoBoxComponent } from './event-info-box/event-info-box.component
 import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule } from 'apollo-angular';
 import { HttpLinkModule } from 'apollo-angular-link-http';
+import { HttpModule } from '../../node_modules/@angular/http';
 
 const appRoutes : Routes = [
   {
@@ -101,6 +102,7 @@ const appRoutes : Routes = [
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true }

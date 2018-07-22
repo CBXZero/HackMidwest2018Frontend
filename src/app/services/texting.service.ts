@@ -12,10 +12,10 @@ export class TextingService {
   }
 
   sendMessages(title: string, eventId: string, friendsToSendTo: any) {
-    this.http.post("https://localhost:5025/api/Twilio", {
+    return this.http.post("http://partyplanner.azurewebsites.net/api/Twilio", {
       title: title,
       eventId: eventId,
       friendsToSendTo: friendsToSendTo
-    }).subscribe();
+    });
   }
 }
