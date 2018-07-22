@@ -1,0 +1,17 @@
+{
+    "name": "Party Planner",
+    "short_name": "Party Planner",
+    "theme_color": "#FFFFFF",
+    "background_color": "#3F51B5",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "\/android-chrome-36x36.png",
+        "sizes": "36x36",
+        "type": "image\/png",
+        "density": "0.75"
+      }
+    ]
+  }
