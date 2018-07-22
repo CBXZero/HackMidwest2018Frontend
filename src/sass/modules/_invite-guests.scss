@@ -1,0 +1,19 @@
+.invitation-list {
+    max-width: $break-small;
+    margin: 0px auto;
+}
+
+.invitation-item {
+    display: grid;
+    grid-template-columns: 1fr 2.625rem;
+    input {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .delete-container {
+        grid-column: 2 / 3;
+        grid-row: 1;
+        padding: .25rem;
+        
+    }
+}

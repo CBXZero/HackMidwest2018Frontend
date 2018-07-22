@@ -1,3 +1,25 @@
-<p>
-  invite-guest-page works!
-</p>
+<h2 class="h-bravo">
+    Invite Guests
+</h2>
+<div class="container" [formGroup]="form">
+    <ul class="invitation-list" formArrayName="contributions">
+        <li class="invitation-item" *ngFor="let contribution of contributions.controls; let i=index">
+            <label class="hidden" for="invite-item-id-1">Item Number
+                <span class="item-number">{{i+1}}</span>
+            </label>
+            <input class="invitation" #contribution (keyup.enter)="onEnter()" type="text" [formControlName]="i" />
+            <span class="delete-container">
+                <button class="delete" (click)="delete(i)" *ngIf="contribution.value != '' && contributions.length > 1" type="button">
+                    <span class="text-container">
+                        <span class="hidden">
+                            Delete
+                        </span>
+                    </span>
+                </button>
+            </span>
+        </li>
+        <li class="invitation-item">
+            <button class="button green" id="add-contribution-request-item" (click)="addContribution()" type="button">Add Another</button>
+        </li>
+    </ul>
+</div>
