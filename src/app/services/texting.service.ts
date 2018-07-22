@@ -12,7 +12,7 @@ export class TextingService {
   }
 
   sendMessages(title: string, eventId: string, friendsToSendTo: any) {
-    return this.http.post("http://partyplanner.azurewebsites.net/api/Twilio", {
+    return this.http.post("https://partyplanner.azurewebsites.net/api/Twilio", {
       title: title,
       eventId: eventId,
       friendsToSendTo: friendsToSendTo

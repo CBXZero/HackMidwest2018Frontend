@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChildren } from '@angular/core';
+import { Component, OnInit, ViewChildren, Output, EventEmitter } from '@angular/core';
 import { FormArray, FormBuilder, FormControl } from '@angular/forms';
+import { OutputEmitter } from '../../../node_modules/@angular/compiler/src/output/abstract_emitter';
+import { AngularFireDatabase } from '../../../node_modules/angularfire2/database';
 
 @Component({
   selector: 'app-dynamic-list',
@@ -9,6 +11,7 @@ import { FormArray, FormBuilder, FormControl } from '@angular/forms';
 export class DynamicListComponent implements OnInit {
 
   @ViewChildren('contribution') domContributions: ViewChildren;
+  @Output() items = new EventEmitter<any>();
 
   form = this.fb.group({
     contributions: this.fb.array([
@@ -19,6 +22,7 @@ export class DynamicListComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    
   }
 
   get contributions() {
@@ -31,6 +35,7 @@ export class DynamicListComponent implements OnInit {
         var element = (this.domContributions as any).last.nativeElement;
         element.focus();
       }, 0);
+      this.items.emit(this.form.value);
       var newField = this.fb.control('');
       this.contributions.push(newField);
     }

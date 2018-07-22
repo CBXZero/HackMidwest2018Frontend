@@ -13,7 +13,7 @@ export class EventsService {
   constructor(public apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
       link: httpLink.create({
-        uri: 'http://partyplanner.azurewebsites.net/graphql'
+        uri: 'https://partyplanner.azurewebsites.net/graphql'
       }),
       cache: new InMemoryCache()
     });

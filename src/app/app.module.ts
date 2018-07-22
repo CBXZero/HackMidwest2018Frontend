@@ -33,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ApolloModule } from 'apollo-angular';
 import { HttpLinkModule } from 'apollo-angular-link-http';
 import { HttpModule } from '../../node_modules/@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 const appRoutes : Routes = [
   {
@@ -57,7 +58,7 @@ const appRoutes : Routes = [
     component: CreateEventPageComponent
   },
   {
-    path: 'edit-contributions',
+    path: 'edit-contributions/:id',
     component: EditContributionsPageComponent
   },
   {
@@ -99,6 +100,7 @@ const appRoutes : Routes = [
     MatInputModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    AngularFireDatabaseModule,
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
