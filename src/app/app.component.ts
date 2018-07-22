@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { auth } from 'firebase';
+import { PwaService } from './services/pwa.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
   title = 'app';
   user: any = null;
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth, public pwa: PwaService) {
     afAuth.user.subscribe(r => {
       if(r){
         this.user = {};
@@ -22,6 +23,10 @@ export class AppComponent {
         this.user = null;
       }
     });
+  }
+
+  installPwa() {
+    this.pwa.promptEvent.prompt();
   }
   
   login() {
