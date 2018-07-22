@@ -39,9 +39,13 @@
       </label>
       <input id="event-end-date" type="text" formControlName="endTime" />
     </li>
+    <li class="event-editor-item">
+        <button class="button green add-date-poll" id="add-date-poll" type="button">
+          Add a date poll
+        </button>
+    </li>
 
     <li class="event-editor-item">
-      <button class="add add-date-poll" id="add-date-poll" type="button">Add a date poll</button>
 
       <ul class="create-date-poll-list">
         <li class="event-editor-item">
@@ -53,60 +57,64 @@
 
         <li class="event-editor-item">
           <label for="event-end-date">
-            End date &amp; tdme
+            End date &amp; time
           </label>
           <input id="event-end-date" type="text" />
         </li>
+        <li class="event-editor-item">
+            <button class="button gray add-date-poll" id="add-date-poll" type="button">
+              Add another date option
+            </button>
+            <button class="delete" id="add-date-poll" type="button">
+              <span class="text-container">
+                <span class="hidden">
+                    Delete
+                </span>
+              </span>
+            </button>
+        </li>
       </ul>
-
     </li>
 
     <li class="event-editor-item">
-      <legend class="columns">
-        <h2 class="h-bravo">Event visibility</h2>
-        <div class="columns">
-          <input type="radio" name="visibility" id="public" value="public" formControlName="visibility">
-          <label for="public">Public</label>
-          <input type="radio" name="visibility" id="private" value="private" formControlName="visibility">
-          <label for="private">Private</label>
-        </div>
-      </legend>
+        <button class="button green add-date-poll" id="add-date-poll" type="button">
+          Add guests
+        </button>
     </li>
 
     <li class="event-editor-item">
-      <legend>
-        <h2 class="h-bravo">Guest options</h2>
-        <p>Are you open to your guests bringing a friend?</p>
-        <div class="columns">
-          <input type="radio" name="guestOptions" id="open" value="open" formControlName="guestOptions">
-          <label for="open">Open</label>
-          <input type="radio" name="guestOptions" id="closed" value="closed" formControlName="guestOptions">
-          <label for="closed">Closed</label>
-        </div>
-      </legend>
-    </li>
+
+        <ul class="create-date-poll-list">
+          <li class="event-editor-item">
+            <label for="guest-1">
+              Name
+            </label>
+            <input id="guest-1" type="text" />
+          </li>
+  
+          <li class="event-editor-item">
+            <label for="guest-1-phone">
+              Phone
+            </label>
+            <input id="guest-1-phone" type="text" />
+          </li>
+          <li class="event-editor-item">
+              <button class="button gray add-date-poll" id="add-date-poll" type="button">
+                Add another guest
+              </button>
+              <button class="delete" id="add-date-poll" type="button">
+                <span class="text-container">
+                  <span class="hidden">
+                      Delete
+                  </span>
+                </span>
+              </button>
+          </li>
+        </ul>
+      </li>
 
 
-    <li class="event-editor-item">
-      <legend>
-        <h2 class="h-bravo">Dress code</h2>
-        <div class="columns">
-            <input type="radio" name="dressCode" id="whatever" value="whatever" formControlName="dressCode">
-            <label for="whatever">Whatever</label>
     
-            <input type="radio" name="dressCode" id="dressy-casual" value="dressy-casual" formControlName="dressCode">
-            <label for="dressy-casual">Dressy casual</label>
-    
-            <input type="radio" name="dressCode" id="business" value="business" formControlName="dressCode">
-            <label for="business">Business</label>
-    
-            <input type="radio" name="dressCode" id="formal" value="formal" formControlName="dressCode">
-            <label for="formal">Formal</label>
-        </div>
-        
-      </legend>
-    </li>
-
     <li class="event-editor-item">
       <button class="button green" (click)="submit()">Submit</button>
     </li>

@@ -8,6 +8,7 @@
 
 
 .date-poll-item {
+    position: relative;
     @include clearfix;
     .date {
         display: block;
@@ -38,4 +39,8 @@
     .results {
 
     }
+}
+.delete {
+    float: right;
+    margin-top: .5rem;
 }
