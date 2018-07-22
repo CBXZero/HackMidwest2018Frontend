@@ -1,16 +1,21 @@
 .poll-group {
     @include clearfix;
-    @include break($break-small) {
+    margin: 0px auto;
+    margin-bottom: 2rem;
+    max-width: $break-small;
+    @include break($break-large) {
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         grid-column-gap: 2rem;
     }
 }
 
 .event-info {
+    margin-top: 1rem;
     .event-header {
+
         position: sticky;
-        top: 0;
+        top: rem;
         .event-title {
             color: $color-charcoal;
             font-size: 1.5rem;
