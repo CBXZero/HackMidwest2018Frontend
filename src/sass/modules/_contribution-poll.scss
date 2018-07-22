@@ -1,11 +1,12 @@
+
+
 .contribution-poll-list {
     display: block;
     @include clearfix;
-
 }
 
 .contribution-poll-item {
     display: block;
     @include clearfix;
-
+    padding: 1rem;
 }

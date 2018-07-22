@@ -2,8 +2,13 @@
 @import 'reset';
 @import 'forms';
 
-@import 'contributions';
 @import 'nav';
-@import 'polls';
+
+@import 'buttons';
+@import 'poll';
+@import 'events';
+
+@import 'contribution-poll';
+@import 'date-poll';
 @import 'structure';
 @import 'forms';

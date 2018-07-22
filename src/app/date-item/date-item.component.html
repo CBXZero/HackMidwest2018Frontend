@@ -1,17 +1,19 @@
 <li class="date-poll-item">
   <input type="checkbox" id="this_date_time">
   <label for="this_date_time">
+    
     <span class="date">
       <span class="day">
         {{startDayOfWeek}}
       </span>
+      <span class="calendar-date">
+        {{startDayOfMonth}}
+      </span>
       <span class="month">
         {{startMonth}}
       </span>
-      <span class="date">
-        {{startDayOfMonth}}
-      </span>
     </span>
+
     <span class="time">
       <span class="start-time">
         {{startTime}}
@@ -28,6 +30,10 @@
           {{endAmPm}}
         </span>
       </span>
+    </span>
+    
+    <span class="current-results">
+      3 others chose this
     </span>
   </label>
 </li>

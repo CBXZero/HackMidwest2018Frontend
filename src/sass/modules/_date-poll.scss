@@ -1,0 +1,39 @@
+
+
+
+.date-poll-list {
+    
+}
+
+.date-poll-item {
+    @include clearfix;
+    .date {
+        display: block;
+        float: left;
+        grid-row: 1 / 3;
+        .calendar-date {
+            font-size: 1.75rem;
+            @include bold;
+
+        }
+        .day {
+            display: block;
+            @include light;
+        }
+        .month {
+            display: block;
+            font-size: 1rem;
+            @include bold;
+        }
+ 
+    }
+    .time {
+        float: left;
+        display: block;
+        @include bold;
+
+    }
+    .results {
+
+    }
+}

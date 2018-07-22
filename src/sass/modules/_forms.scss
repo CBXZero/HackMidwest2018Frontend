@@ -1,0 +1,428 @@
+form {
+    position: relative;
+  
+    ul,
+    li {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      display: block;
+      list-style-type: none;
+    }
+    li {
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  label {
+    @include bold;
+    margin-bottom: .25rem;
+    display: block;
+    cursor: pointer;
+  }
+  
+  //
+  // RADIO CHECKBOX
+  //
+  
+  input[type='radio'],
+  input[type='checkbox'] {
+    @extend .hidden;
+  }
+  
+  input[type=checkbox] + label,
+  input[type=radio] + label {
+    display: grid;
+    border-radius: 2px;
+    grid-template-columns: 1fr 2fr;
+    padding: 1rem .25rem 1rem 3.25rem;
+    background: #fff;
+    box-shadow: 0 1px 4px -2px rgba(#000,.4);
+    position: relative;
+    color: $color-charcoal;
+    transition: .2s;
+    font-size: 1rem;
+    text-align: left;
+    border: 1px solid #fff;
+    @include regular;
+  }
+  input[type=radio] + label {
+    grid-template-columns: 1fr;
+  }
+  
+  input[type=checkbox]:checked + label,
+  input[type=radio]:checked + label {
+    background: lighten($color-green,60);
+    border: 1px solid $color-green;
+  }
+  
+  input[type=checkbox] + label:hover,
+  input[type=radio] + label:hover,
+  input[type=checkbox]:focus + label,
+  input[type=radio]:focus + label {
+    border: 1px solid $color-green;
+  }
+  
+  input[type=checkbox]:checked:focus + label,
+  input[type=radio]:checked:focus + label {
+    border: 1px solid $color-green;
+  }
+  
+  
+  // Shadow
+  input[type=checkbox] + label:before,
+  input[type=radio] + label:before{
+    transition: .4s;
+    position: absolute;
+    content: "";
+    top: calc(1rem + 1px);
+    left: calc(1rem);
+    line-height: 18px;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    background: $color-gray;
+    border: 2px solid rgba(#fff,.7);
+    background: transparent;
+  }
+  input[type=checkbox] + label:after,
+  input[type=radio] + label:after{
+    transition: .4s;
+    position: absolute;
+    content: "";
+    left: calc(1rem);
+    top: calc(1rem);
+    line-height: 18px;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    background: #fff;
+    border: 2px solid $color-gray;
+    background: transparent;
+  }
+  
+  input[type=radio] + label:before,
+  input[type=radio] + label:after {
+    border-radius: 50%;
+  }
+  
+  input[type=checkbox]:checked + label:before {
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    background: transparent;
+    border: none;
+    top: calc(.75rem + 1px);
+    height: 19px;
+    width: 10px;
+    border-right: 3px solid rgba(#000,.3);
+    border-bottom: 3px solid rgba(#000,.3);
+  }
+  
+  input[type=checkbox]:checked + label:after {
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    background: transparent;
+    border: none;
+    top: calc(.75rem);
+    height: 19px;
+    width: 10px;
+    border-right: 3px solid  $color-green;
+    border-bottom: 3px solid  $color-green;
+  }
+  
+  
+  input[type=radio]:checked + label:before {
+    border: none;
+  }
+  
+  input[type=radio]:checked + label:after {
+    background: #fff;
+    box-shadow: inset 0px 0px 0px 3px $color-charcoal;
+  }
+  
+  input#kittenType { display: none; }
+  
+  input[type='text'],
+  input[type='email'],
+  input[type='date'],
+  input[type='tel'],
+  textarea {
+    padding: .5rem;
+    @include regular;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: $gutter/2;
+    border-radius: 4px;
+    border: 1px solid darken($color-smoke,10);
+    width: calc(100% - 1.25rem);
+    font-size: 16px;
+  }
+  
+  
+  button[type='submit'] {
+    @extend .button;
+    display: block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  
+  .closed {
+    display: none;
+  }
+  .open {
+    display: block;
+  }
+  
+  .propertyDamage,
+  .nearMiss,
+  .crash {
+    @extend .closed;
+  }
+  
+  .fields {
+    width: calc(100%);
+    @include clearfix;
+  
+    .heading {
+      margin: 1rem 0 .5rem 0;
+      @include bold;
+    }
+  
+    .checkbox-group,
+    .radio-group {
+      display: table;
+      @include clearfix;
+      width: calc(100%);
+      margin-bottom: 1rem;
+      float: left;
+  
+      label {
+        display: table-cell;
+        width: calc(33.33333333333%);
+        text-align: center;
+        border-right: 1px solid darken($color-charcoal,40);
+        cursor: pointer;
+  
+        &:first-of-type {
+          border-radius: .35rem 0 0 .35rem;
+        }
+        &:last-of-type {
+          border-radius: 0 .35rem .35rem 0;
+          width: calc(33.33333333333% - 1px);
+          border-right: none;
+        }
+      }
+      &.group-of-1 {
+        label {
+          display: table-cell;
+          width: calc(50%);
+          text-align: center;
+        }
+      }
+      &.group-of-2 {
+        label {
+          display: table-cell;
+          width: calc(50%);
+          text-align: center;
+        }
+      }
+      &.group-of-4 {
+        label {
+          display: table-cell;
+          width: calc(25%);
+          text-align: center;
+        }
+      }
+      &.group-of-5 {
+        label {
+          display: table-cell;
+          width: calc(20%);
+          text-align: center;
+        }
+      }
+      &.group-of-6 {
+        label {
+          display: table-cell;
+          width: calc(16.6666667%);
+          text-align: center;
+        }
+      }
+      &.group-of-7 {
+        label {
+          display: table-cell;
+          width: calc(14.2857143%);
+          text-align: center;
+        }
+      }
+  
+      &.mode {
+        @include break($break-mid) {
+          float: left;
+          width: calc(50%);
+        }
+      }
+      &.outcome {
+        @include break($break-mid) {
+          float: left;
+          width: calc(25% - 1rem);
+          margin-right: 0;
+          margin-left: 1rem;
+        }
+      }
+      &.geography {
+        @include break($break-mid) {
+          float: left;
+          width: calc(25% - 1rem);
+          margin-right: 0;
+          margin-left: 1rem;
+        }
+      }
+  
+    }
+    .date-range {
+      float: left;
+      background: $color-blue;
+      @include clearfix;
+      width: calc(100% - 1rem);
+      padding: 1rem .5rem 0rem .5rem;
+      margin-bottom: 1rem;
+      border-radius: .35rem;
+  
+      .years {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        padding-bottom: 1rem;
+        .year {
+          display: table-cell;
+          text-align: center;
+          font-size: .75rem;
+          color: $color-gray-light;
+          @include break($break-large) {
+            font-size: .8rem;
+          }
+        }
+      }
+      .multi-range {
+        margin-left: 3%;
+        margin-right: 3%;
+        position: relative;
+        padding-top: 1rem;
+        height: 1rem;
+  
+        input[type=range] {
+          position: absolute;
+  
+          &.lower {
+            z-index: 999;
+            border-bottom: 4px solid #fff;
+            left: -4px;
+            &::-ms-track {
+              margin-bottom: -28px;
+              height: 28px;
+              background: #fff;
+            }
+            &::-ms-thumb {
+              margin-top: -28px;
+            }
+            &::-ms-fill-lower {
+              background: transparent;
+            }
+  
+            &::-ms-fill-upper {
+              background: transparent;
+            }
+          }
+          &.upper {
+            position: relative;
+            &::-webkit-slider-runnable-track {
+              background: transparent;
+            }
+            &::-moz-range-track {
+              background: transparent;
+            }
+            &::-ms-track {
+              margin-top: 36px;
+            }
+            &::-ms-thumb {
+              transform: rotate(135deg);
+              margin-top: 0px;
+  
+            }
+            &::-ms-fill-lower {
+              background: transparent;
+            }
+  
+            &::-ms-fill-upper {
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
+  
+    .mailing_list {
+      input[type=checkbox] + label {
+        text-align: left;
+        padding-left: 3.5rem;
+        padding-top: .825rem;
+        padding-bottom: .625rem;
+        border-radius: 4px;
+      }
+  
+      input[type=checkbox] + label:before {
+        left: calc(1.25rem);
+  
+      }
+      input[type=checkbox] + label:after {
+        left: calc(1.25rem);
+      }
+  
+    }
+  }
+
+  
+  .alert,
+  .help-block {
+    display: block;
+    background: lighten($color-red,40);
+    padding: 1rem;
+    border: 2px solid desaturate($color-red,20);
+    border-radius: 4px;
+    @include clearfix;
+  
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .alert {
+    margin-bottom: 1rem;
+    color: #fff;
+    @include bold;
+    background: lighten($color-red,5);
+    text-shadow: 0 -1px 0 darken($color-red,20);
+  }
+  
+  .required {
+    &:after {
+      content: "*";
+      @include bold;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: desaturate($color-red,20);
+    }
+  }
+  
+  
+  input[type=range] {
+    left: 0;
+  
+  }  
